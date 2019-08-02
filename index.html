@@ -41,25 +41,26 @@
               />
             </div>
           </form>
+
           <div id="output">
             <div class="card bg-primary mb-2">
               <div class="card-block">
                 <h4>Grams:</h4>
-                <div class="gramsOutput"></div>
+                <div id="gramsOutput"></div>
               </div>
             </div>
 
             <div class="card bg-success mb-2">
               <div class="card-block">
                 <h4>Kilograms:</h4>
-                <div class="kgOutput"></div>
+                <div id="kgOutput"></div>
               </div>
             </div>
 
             <div class="card bg-danger">
               <div class="card-block">
                 <h4>Ounces:</h4>
-                <div class="ozOutput"></div>
+                <div id="ozOutput"></div>
               </div>
             </div>
           </div>
@@ -68,11 +69,15 @@
     </div>
 
     <script>
+      document.getElementById("output").style.visibility = "hidden";
       document
         .getElementById("lbsInput")
         .addEventListener("input", function(e) {
-          let pounds = e.target.value;
-          document.getElementById
+          document.getElementById("output").style.visibility = "visible";
+          let lbs = e.target.value;
+          document.getElementById("gramsOutput").innerHTML = lbs / 0.0022046;
+          document.getElementById("kgOutput").innerHTML = lbs / 2.2046;
+          document.getElementById("ozOutput").innerHTML = lbs * 16;
         });
     </script>
   </body>
