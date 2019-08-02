@@ -43,24 +43,30 @@
           </form>
 
           <div id="output">
-            <div class="card bg-primary mb-2">
-              <div class="card-block">
-                <h4>Grams:</h4>
-                <div id="gramsOutput"></div>
+            <div class="card text-white bg-primary mb-3">
+              <div class="card-header">Grams:</div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <div id="gramsOutput"></div>
+                </h5>
               </div>
             </div>
 
-            <div class="card bg-success mb-2">
-              <div class="card-block">
-                <h4>Kilograms:</h4>
-                <div id="kgOutput"></div>
+            <div class="card text-white bg-success mb-3">
+              <div class="card-header">Kilograms:</div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <div id="kgOutput"></div>
+                </h5>
               </div>
             </div>
 
-            <div class="card bg-danger">
-              <div class="card-block">
-                <h4>Ounces:</h4>
-                <div id="ozOutput"></div>
+            <div class="card text-white bg-danger mb-3">
+              <div class="card-header">Ounces:</div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <div id="ozOutput"></div>
+                </h5>
               </div>
             </div>
           </div>
@@ -68,17 +74,6 @@
       </div>
     </div>
 
-    <script>
-      document.getElementById("output").style.visibility = "hidden";
-      document
-        .getElementById("lbsInput")
-        .addEventListener("input", function(e) {
-          document.getElementById("output").style.visibility = "visible";
-          let lbs = e.target.value;
-          document.getElementById("gramsOutput").innerHTML = lbs / 0.0022046;
-          document.getElementById("kgOutput").innerHTML = lbs / 2.2046;
-          document.getElementById("ozOutput").innerHTML = lbs * 16;
-        });
-    </script>
+    <script src="weightConverter.js"></script>
   </body>
 </html>
