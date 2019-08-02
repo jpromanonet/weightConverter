@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Metatags-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!--Boostrap4 CDN-->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!--Style-->
+    <style>
+      body {
+        margin-top: 70px;
+        background: #333;
+        color: #fff;
+      }
+    </style>
+
+    <!--Title-->
+    <title>Multiple Weight Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h1 class="display-5 text-center mb-3">Weight Converter</h1>
+
+          <form>
+            <div class="form-group">
+              <input
+                type="number"
+                id="kgInput"
+                class="form-control form-control-lg"
+                placeholder="Enter Kilograms..."
+              />
+            </div>
+          </form>
+
+          <div id="output">
+            <div class="card text-white bg-primary mb-3">
+              <div class="card-header">Grams:</div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <div id="gramsOutput"></div>
+                </h5>
+              </div>
+            </div>
+
+            <div class="card text-white bg-success mb-3">
+              <div class="card-header">Pounds:</div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <div id="lbsOutput"></div>
+                </h5>
+              </div>
+            </div>
+
+            <div class="card text-white bg-danger mb-3">
+              <div class="card-header">Ounces:</div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <div id="ozOutput"></div>
+                </h5>
+              </div>
+            </div>
+
+            <div class="card text-white bg-warning mb-3">
+              <div class="card-header">Stones:</div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <div id="stOutput"></div>
+                </h5>
+              </div>
+            </div>
+
+            <div class="card text-white bg-info mb-3">
+              <div class="card-header">Tons:</div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <div id="tnOutput"></div>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="weightConverterKg.js"></script>
+  </body>
+</html>
